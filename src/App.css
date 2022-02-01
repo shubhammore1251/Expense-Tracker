@@ -1,38 +1,857 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+body{
+  font-family: 'Zen Kurenaido', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Header Component*/
+.header-container{
+  width:50%;
+  margin: auto;
+  background-color: #c70e0e;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 6px 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo .fa-chart-line{
+  margin-left: 10px;
+}
+
+.header-button a{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.header-button a:hover{
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.header-button .fa-github-square{
+  margin-right: 10px;
+}
+
+.header-button a{
+  text-decoration: none;
+  color: white;
+
+}
+
+
+/*Home Component*/
+.home{
+  width: 50%;
+  margin: auto;
+}
+
+
+
+/*TopFold*/
+.topfold{
+  margin: 6px  8px;
+  padding: 12px 0;
+  align-items: center;
+}
+
+.home-topfold{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.search-bar{
+  display: flex;
+  align-self: center;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 6px 8px;
+}
+
+.search-bar .search-text{
+  border:none;
+  width:80%;
+  outline: none;
+  margin: 0 5px;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.search-bar .fa-search{
+  margin: 6px 5px;
+  font-size: large;
+}
+
+.add-button{
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+.link{
+   text-decoration: none;
+   color: black;
+
+}
+
+.add-button,.label:hover{
+  cursor: pointer;
+}
+
+.add-button .fa-plus-circle{
+  margin: 0 5px;
+}
+
+.label{
+  font-weight: bold;
+}
+
+.add-topfold{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.add-topfold-button{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-topfold-button i{
+  margin-right: 4px;
+}
+
+.add-topfold-button,.label:hover{
+  cursor: pointer;
+}
+
+
+
+/*Add Expense*/
+.add-expense{
+  width: 50%;
+  margin: auto;
+}
+
+
+/*Add Form*/
+.add-form{
+  border-radius: 12px;
+  background:  white;
+  box-shadow:  35px 35px 53px #bebebe,
+             -35px -35px 53px #ffffff;
+
+  margin: 20px 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 60vh;
+  min-width: 250px;
+}
+
+.form-item{
+  margin: 12px 0px;
+  width: 70%;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item label{
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.form-input-styles{
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  outline:none;
+  border-radius: 5px;
+  border-bottom: 3.5px solid black;
+}
+
+.form-input-styles2{
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  outline:none;
+  border-radius: 5px;
+  border-bottom: 3.5px solid rgb(255, 0, 0);
+  transition: .2s ease;
+}
+
+
+.category-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category{
+  position: relative;
+  width: 40%;
+}
+
+.category-dropdown{
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  margin: 12px 0px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.category-dropdown-color{
+  border-bottom: 3.5px solid black;
+}
+
+.category-dropdown-color2{
+  border-bottom: 3.5px solid rgb(255, 0, 0);
+  transition: .2s ease;
+}
+
+.category-dropdown i{
+  display: flex;
+  align-items: center;
+}
+
+
+.category-container2{
+  display: flex;
+  /* position: absolute; */
+  width: 100%;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow:  24px 24px 51px #bebebe,
+             -24px -24px 51px #ffffff;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.category-item{
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.category-item img{
+  height: 32px;
+  margin-right: 20px;
+}
+
+.form-add-btn{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.form-add-btn div{
+  display: flex;
+  border: 2px solid black;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: bold;
+  
+}
+
+.form-add-btn div i {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.form-add-btn label,i:hover{
+  cursor: pointer;
+}
+
+.form-add-btn div:hover{
+  color: white;
+  background-color: black;
+}
+
+
+
+/*Success Modal*/
+.inner-modal{
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.inner-modal label{
+  font-size: 18px;
+}
+
+.added-image{
+  height: 360px;
+  margin: 15px 0;
+}
+
+.home-redirect{
+  border: 2px solid white;
+  border-radius: 6px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 4px;
+}
+
+.home-redirect i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+
+}
+
+.tohome{
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*expense-list*/
+.expense-list{
+   margin: 6px 12px;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   min-width: 260px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.empty-state{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-image{
+  height: 360px;
+}
+
+.empty-state label{
+  font-size: 25px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/*Expense Card*/
+.card{
+  background-color: #c9c7c78e;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.card img{
+  height: 40px;
+}
+
+.card-info{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  margin-left: 12px;
+}
+.card-right-data{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-title{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-time{
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card-amount{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+
+/*Footer*/
+.footer-container{
+  width:90%;
+  margin: 20px auto;
+  background-color: #c70e0e;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  min-width: 270px;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 6px 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+/*media query*/
+
+/*Mobile Devices*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .header-container{
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header{
+    font-size: 1.2rem;
   }
+  
+  .search-bar{
+    width: 200px;
+    margin-left: -65px;
+    margin-right: 10px;
+  }
+  
+  .search-bar .search-text{
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .add-button{
+    padding: 8px;
+    font-size: small;
+  }
+
+  .add-topfold-button{
+    font-size: 15px;
+  }
+  
+  .add-topfold .button1{
+    margin-left: -50px;
+  }
+
+  .add-topfold .button2{
+    margin-right: -50px;
+  }
+  
+  .expense-list{
+    margin: 6px 0;
+    margin-left: -40px;
+  }
+  
+  
+  .card img{
+    height: 25px;
+  }
+
+  .card-right-data{
+    font-size: 18px;
+  }
+
+  .card-title{
+    font-size: 18px;
+  }
+
+  .card-time{
+    font-size: 15px;
+  }
+
+  .card-amount{
+    font-size: 18px;
+  }
+
+  .footer-container{
+    margin-left: -20px;
+    padding: 10px;
+  }
+  
+  .footer{
+    margin: 6px 10px;
+    font-size: 1rem;
+  }
+
+  .add-form{
+    margin-left: -55px;
+    padding: 25px;
+  }
+  
+  .form-item{
+    margin: 12px 0px;
+    width: 90%;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .form-item label{
+    font-size: 12px;
+  }
+  
+  .form-input-styles{
+    font-size: 13px;
+  }
+  
+  .form-input-styles2{
+    font-size: 13px;
+  }
+  
+  .category{
+    width: 95%;
+  }
+  
+  .category-dropdown{
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .category-container2{
+    padding: 12px;
+    margin: 20px auto;
+  }
+  
+  .category-item img{
+    height: 30px;
+  }
+  
+  .form-add-btn div{
+    font-size: 20px;
+  }
+
+  .inner-modal{
+    width: 250px;
+  }
+  
+  .inner-modal label{
+    font-size: 14px;
+  }
+  
+  .added-image{
+    height: 230px;
+    width: 260px;
+  }
+  
+  .home-redirect{
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .empty-image{
+    margin-top: 15px;
+    height: 300px;
+  }
+  
+  .empty-state label{
+    font-size: 15px;
+    margin: 20px 0;
+  }
+  
+}
+
+
+/*Ipads Tablets*/
+@media (min-width: 481px) and (max-width: 768px) {
+   
+  .header-container{
+    width: 90%;
+  }
+
+  .header{
+    font-size: 1.2rem;
+  }
+  
+  .search-bar{
+    width: 300px;
+    margin-left: -80px;
+    margin-right: 40px;
+  }
+  
+  .search-bar .search-text{
+    width: 200px;
+    font-size: 15px;
+  }
+
+  .add-button{
+    padding: 10px;
+    font-size: medium;
+  }
+
+  .add-topfold .button1{
+    margin-left: -120px;
+  }
+
+  .add-topfold .button2{
+    margin-right: -120px;
+  }
+
+  .expense-list{
+    margin: 6px 0;
+    margin-left: -80px;
+    width: 550px;
+  }
+  
+  
+  .card img{
+    height: 35px;
+  }
+
+
+  .card-title{
+    font-size: 20px;
+  }
+
+  .card-time{
+    font-size: 16px;
+  }
+
+
+  .footer-container{
+    margin-left: 20px;
+  }
+
+  .add-form{
+    margin-left: -55px;
+    
+  }
+  
+  .form-item{
+    width: 90%;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .form-item label{
+    font-size: 12px;
+  }
+  
+  .form-input-styles{
+    font-size: 13px;
+  }
+  
+  .form-input-styles2{
+    font-size: 13px;
+  }
+  
+  .category{
+    width: 80%;
+  }
+  
+  .category-dropdown{
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+
+  .category-item img{
+    height: 30px;
+  }
+
+  .inner-modal{
+    width: 350px;
+  }
+  
+  .inner-modal label{
+    font-size: 18px;
+  }
+  
+  .home-redirect{
+    padding: 6px;
+    font-size: 20px;
+  }
+
+  .empty-image{
+    margin-top: 15px;
+    height: 400px;
+  }
+  
+  .empty-state label{
+    font-size: 25px;
+    margin: 20px 0;
+  }
+
+}
+
+
+
+/*Small Screen and Laptops*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-container{
+    width: 70%;
+  }
+
+  .search-bar{
+    width: 500px;
+    margin-left: -80px;
+    margin-right: 20px;
+  }
+
+  .search-bar .search-text{
+    width: 300px;
+    font-size: 20px;
+  }
+
+  .add-button{
+    padding: 8px;
+    font-size: large;
+  }
+  
+  .add-topfold .button1{
+    margin-left: -80px;
+  }
+
+  .add-topfold .button2{
+    margin-right: -80px;
+  }
+
+  .expense-list{
+    margin: 6px 0;
+    margin-left: -85px;
+    width: 580px;
+  }
+  
+  
+  .card img{
+    height: 45px;
+  }
+  
+  .card-right-data{
+    font-size: 23px;
+  }
+
+  .card-title{
+    font-size: 25px;
+  }
+
+  .card-time{
+    font-size: 20px;
+  }
+  
+  .card-amount{
+    font-size: 25px;
+  }
+
+  .footer-container{
+    margin-left: 20px;
+  }
+  
+  .footer{
+    margin: 6px 10px;
+    font-size: 1.6rem;
+  }
+
+  .add-form{
+    margin-left: -60px;
+    width: 500px;
+  }
+  
+  .form-item{
+    width: 90%;
+  }
+  
+  .form-item label{
+    font-size: 18px;
+  }
+  
+  .form-input-styles{
+    font-size: 16px;
+  }
+  
+  .form-input-styles2{
+    font-size: 16px;
+  }
+  
+  .category{
+    width: 60%;
+  }
+  
+  .category-dropdown{
+    font-size: 18px;
+  }
+  
+
+  .category-item img{
+    height: 30px;
+  }
+  
+  .category-item label{
+    font-size: 20px;
+
+  }
+  .inner-modal{
+    width: 500px;
+  }
+  
+  .inner-modal label{
+    font-size: 25px;
+  }
+
+  .added-image{
+    height: 480px;
+    width: 500px;
+  }
+  
+  .home-redirect{
+    padding: 8px;
+    font-size: 28px;
+  }
+
+  .empty-image{
+    margin-top: 15px;
+    height: 550px;
+  }
+  
+  .empty-state label{
+    font-size: 25px;
+    margin: 20px 0;
+  }
+
 }

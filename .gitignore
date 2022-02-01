@@ -11,6 +11,11 @@
 # production
 /build
 
+#files
+!src/assests
+/index.css
+/reportWebVitals
+
 # misc
 .DS_Store
 .env.local
