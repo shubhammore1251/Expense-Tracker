@@ -1,6 +1,6 @@
 # Expense Tracker - Using React Redux
 
-![Logo](D:/WEB DEVELOPMENT/ReactJs/Seperate Projects/expensetracker/src/assests/ExpenseTracker.png)
+![Logo](D:\WEB DEVELOPMENT\ReactJs\Seperate Projects\expensetracker\src\assests\ExpenseTracker.png)
 
 An Basic Expense Tracker App made using react-redux
 
