@@ -36,7 +36,7 @@ const Footer = () => {
             notifyError();
             return;
         }
-    }, [])
+    }, [sum])
     
 
     return (
